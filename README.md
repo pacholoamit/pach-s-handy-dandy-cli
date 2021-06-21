@@ -65,10 +65,26 @@ sudo bash install.sh pach [@OPTIONAL | Folder to bin]
 
 ### Usage
 
-To view the scripts on this CLI, run:
+To check if `pach` is installed correctly, run `pach` on your terminal.
+The output should be as below
+
+![Screenshot_20210621_193520](https://user-images.githubusercontent.com/69985528/122755691-f1ae7800-d2c7-11eb-93dc-530488830805.png)
+
+To view script arguments and usage on this CLI, run:
 
 ```bash
-pach help
+pach [FLAG] help
+#Ex.
+pach --r help
+
+#Output
+--r cpc = Queries and generates a CSV file for campaign click attribution
+
+Commands #Note APP_ID UTM_CODE and RETAIL_ID are arguments to `pach --r cpc`
+
+pach --r cpc APP_ID UTM_CODE RETAIL_ID
+
+
 ```
 
 To locate where `pach` is installed,
