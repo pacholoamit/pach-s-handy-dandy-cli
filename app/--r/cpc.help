@@ -1,0 +1,5 @@
+ARGS  - APP_ID UTM_CODE RETAIL_ID
+
+This command will query snowflake and generate a csv file as an output of the query.
+It is required you provide an APP_ID, UTM_CODE and RETAIL_ID. The resulting report
+is useful for finding marketing campaign click attribution

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+CYAN=`tput setaf 6`
+NOCOLOR=`tput sgr0`
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+echo "${CYAN}Please provide an APP_ID${NOCOLOR}"
+read aid
+echo "${CYAN}Please provide a UTM_CAMPAIGN${NOCOLOR}"
+read utmc
+echo "${CYAN}Please provide a RETAIL_ID${NOCOLOR}"
+read retid
+
+if [[ $aid && $utmc && $retid ]] 
+then
+    echo "${CYAN}Loading, please be patient${NOCOLOR}"
+    snowsql -D APP_ID=$aid -D UTM_CAMPAIGN=$utmc -D RETAIL_ID=$retid -o output_file=./$utmc-storeid-$retid.csv -o quiet=true -o friendly=false -o header=false -o output_format=csv -o variable_substitution=true -f ${SCRIPT_DIR}/cpc.sql
+    echo "
+    ${CYAN}
+    The statement below is what would normally be attached with the csv file for custom correspondence
+
+
+    ----------------------------------------- COPY STARTING HERE --------------------------------------
+
+
+    All time results for Google Ads Campaigns - $utmc using application id $aid and retaild id - $retid
+
+
+    ----------------------------------------- COPY ENDING HERE --------------------------------------"
+    ${NOCOLOR}
+else
+    echo "arguments are not fulfilled"
+fi
