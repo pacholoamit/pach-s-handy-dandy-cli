@@ -13,7 +13,7 @@ read retid
 if [[ $aid && $utmc && $retid ]] 
 then
     echo "${CYAN}Loading, please be patient${NOCOLOR}"
-    snowsql -D APP_ID=$aid -D UTM_CAMPAIGN=$utmc -D RETAIL_ID=$retid -o output_file=./$utmc-storeid-$retid.csv -o quiet=true -o friendly=false -o header=false -o output_format=csv -o variable_substitution=true -f ${SCRIPT_DIR}/cpc.sql
+    snowsql -D APP_ID=$aid -D UTM_CAMPAIGN=$utmc -D RETAIL_ID=$retid -o output_file=./$utmc-storeid-$retid.csv -o friendly=false -o header=false -o output_format=csv -o variable_substitution=true -f ${SCRIPT_DIR}/cpc.sql
     echo "
     ${CYAN}
     The statement below is what would normally be attached with the csv file for custom correspondence

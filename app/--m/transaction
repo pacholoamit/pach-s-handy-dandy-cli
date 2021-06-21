@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+CYAN=`tput setaf 6`
+NOCOLOR=`tput sgr0`
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+echo "${CYAN}Querying${NOCOLOR}"
+snowsql -f ${SCRIPT_DIR}/transaction.sql -o friendly=false
