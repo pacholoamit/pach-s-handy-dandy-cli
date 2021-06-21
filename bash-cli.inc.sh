@@ -80,7 +80,6 @@ function bcli_entrypoint() {
     if [[ ! -f "$cmd_file" ]]; then
         "$root_dir/help" "$0" "${@:1:$((cmd_arg_start-1))}"
         >&2 echo -e "${COLOR_RED}We could not find the command ${COLOR_CYAN}$cli_entrypoint ${*:1:$cmd_arg_start}${COLOR_NORMAL}"
-        >&2 echo -e "To help out, we've shown you the help docs for ${COLOR_CYAN}$cli_entrypoint ${*:1:$((cmd_arg_start-1))}${COLOR_NORMAL}"
         exit 3
     fi
 
