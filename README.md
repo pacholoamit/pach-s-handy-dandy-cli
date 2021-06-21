@@ -86,8 +86,22 @@ pach --r help
 Commands #Note APP_ID UTM_CODE and RETAIL_ID are arguments to `pach --r cpc`
 
 pach --r cpc APP_ID UTM_CODE RETAIL_ID
+```
+## Help
 
+Don't know what arguments to pass in? Don't know what anything does?
+I gotchu my boy
 
+```bash
+# Returns all available scripts
+
+pach help
+
+# Returns help for all scripts under --q flag
+pach help --q
+
+# Returns help for specific script usage in a specific flag
+pach help --q transaction
 ```
 
 To locate where `pach` is installed,
