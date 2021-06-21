@@ -1,0 +1,7 @@
+--q transaction = Queries latest transactions and returns a table with 
+                    APP_ID,
+                    COLLECTOR_TSTAMP,
+                    TR_TOTAL,
+                    TR_ORDERID
+                    generates a view that makes it easy for check if tranasction data is being captured
+

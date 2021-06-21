@@ -1,0 +1,6 @@
+ARGS  - @REQUIRED APP_ID , @OPTIONAL LIMIT
+
+Provide the APP_ID to query for transactions. The 2nd argument
+LIMIT is optional by default not providing a value for this argument
+will fetch all transactions for the specified APP_ID. providing
+a limit argument will limit the output of the query.
