@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#!/usr/bin/env bash
+CYAN=`tput setaf 6`
+NOCOLOR=`tput sgr0`
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+echo "${CYAN}Loading, please be patient${NOCOLOR}"
+
+if [[ $1 ]]
+then
+    snowsql -D APP_ID=$1 -D LIMIT=${2:-"NULL"} -o friendly=false -o header=false -o variable_substitution=true -f ${SCRIPT_DIR}/pageview.sql
+else
+    echo "${CYAN}Please provide the required argument APP_ID${NOCOLOR}"
+fi

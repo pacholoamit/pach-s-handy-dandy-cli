@@ -1,2 +1,2 @@
 --m pageview = Queries latest pageview timestamp & generates a view that makes it easy for monitoring our tracker
---m pageview = Queries latest transaction timestamp & generates a view that makes it easy for monitoring our tracker
+--m transaction = Queries latest transaction timestamp & generates a view that makes it easy for monitoring our tracker
