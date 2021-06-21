@@ -3,6 +3,48 @@
 
 A Handy dandy CLI tool written entirely in Bash/Shell
 
+## Prerequisites
+You will require `snowsql` to be recognized in your `PATH`
+to be able to use most of what my bash script offers.
+Link to installing snowSQL [here](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
+
+## `snowsql`
+
+```bash
+snowsql --version
+Version: 1.2.15
+```
+## `snowsSQL config file`
+
+Usually, the `snowsql` config file will be located at `~/.snowsql/config`
+If that is the case, you'd want to add:
+
+- `username`
+- `password` 
+- `region`, and;
+- `warehouse`
+
+to your config file. You have some options on how you want
+to do this:
+
+```bash
+#Option 1:
+sudo [code editor] [path to config file]
+#Ex.
+sudo code ~/.snowsql/config
+sudo nano ~/.snowsql/config
+sudo micro ~/.snowsql/config
+
+#Option 2:
+echo "accountname = [ACCOUNT NAME HERE]
+region = [REGION NAME]
+username = [SNOWFLAKE USER NAME]
+password = [SNOWFLAKE USER PASSWORD]
+warehousename = [SNOWFLAKE WAREHOUSE]" >> ~/.snowsql/config # or location where your config file is located
+
+```
+
+
 ## Installation
 
 There's already an installation script in the app directory.
